@@ -1,5 +1,64 @@
 # Changelog
 
+## [3.9.4](https://github.com/zone-eu/zone-mta/compare/v3.9.3...v3.9.4) (2024-02-09)
+
+
+### Bug Fixes
+
+* **logs:** send bounce information to remote log ([3fd3986](https://github.com/zone-eu/zone-mta/commit/3fd3986b3874071e135060fca7695a23715c4ff1))
+
+## [3.9.3](https://github.com/zone-eu/zone-mta/compare/v3.9.2...v3.9.3) (2024-02-08)
+
+
+### Bug Fixes
+
+* **bounces:** fixed bounce handling in mail queue ([05d2b8d](https://github.com/zone-eu/zone-mta/commit/05d2b8d6ec21d4c280b5da7e7e1dd1053354f49d))
+* **sts:** do not try to store error object as JSON value ([9a45336](https://github.com/zone-eu/zone-mta/commit/9a45336a2bc92247c95880abf1aa0df42b682b2a))
+
+## [3.9.2](https://github.com/zone-eu/zone-mta/compare/v3.9.1...v3.9.2) (2024-02-08)
+
+
+### Bug Fixes
+
+* **deps:** bumped nodemailer and smtp-server versions ([0a2371d](https://github.com/zone-eu/zone-mta/commit/0a2371dbc4dc5874ebea04b8ce3568030039d853))
+* **logs:** added new remote log entry QUEUE_POLL ([800b583](https://github.com/zone-eu/zone-mta/commit/800b5835e99a7f1e0370b114b2821464785ac30a))
+
+## [3.9.1](https://github.com/zone-eu/zone-mta/compare/v3.9.0...v3.9.1) (2024-02-02)
+
+
+### Bug Fixes
+
+* **api:** added endpoint to list locked domains ([25102ca](https://github.com/zone-eu/zone-mta/commit/25102ca71010951fb592c6d8bdb4852976a49c1e))
+* **loop:** reject messages with too many Received headers ([cbffa6d](https://github.com/zone-eu/zone-mta/commit/cbffa6d3dcadb937b9303a42fbe2603fd1668fb8))
+* **mime-head:** Increased allowd MIME node header size to 2MB ([26e4896](https://github.com/zone-eu/zone-mta/commit/26e48967bd96e8aa08b1986513fe4733961bd672))
+* **tls-options:** Retrieve ignoreTLS value from Sending Zone, or default to false ([#365](https://github.com/zone-eu/zone-mta/issues/365)) ([336e835](https://github.com/zone-eu/zone-mta/commit/336e8358be5992bd15392fc07064540fda4aa23d))
+
+## [3.9.0](https://github.com/zone-eu/zone-mta/compare/v3.8.0...v3.9.0) (2024-01-19)
+
+
+### Features
+
+* **bounces:** Send a delayed notification email if a delivery has not been completed after 3 hours ZMS-56 ([#363](https://github.com/zone-eu/zone-mta/issues/363)) ([a535e3a](https://github.com/zone-eu/zone-mta/commit/a535e3a7e10e517eaac13af6819420aa45d10725))
+
+## [3.8.0](https://github.com/zone-eu/zone-mta/compare/v3.7.0...v3.8.0) (2024-01-15)
+
+
+### Features
+
+* **api:** Allow ordering queue listing ([41017ff](https://github.com/zone-eu/zone-mta/commit/41017ffa3cdc852e0ea4960ec45ea94092aa7699))
+
+## [3.7.0](https://github.com/zone-eu/zone-mta/compare/v3.6.13...v3.7.0) (2023-12-14)
+
+
+### Features
+
+* **plugins:** Added new plugin hook sender:responseError, allow configuratble defer times ([#360](https://github.com/zone-eu/zone-mta/issues/360)) ([061248f](https://github.com/zone-eu/zone-mta/commit/061248f647a98a74f33fa0da09ea2a13e42be6ac))
+
+
+### Bug Fixes
+
+* **bounce:** Fixed Outlook no-such-user bounce detection ([#357](https://github.com/zone-eu/zone-mta/issues/357)) ([0b49571](https://github.com/zone-eu/zone-mta/commit/0b49571fb6677a1570ec1b266cecb81aa5e567e5))
+
 ## [3.6.13](https://github.com/zone-eu/zone-mta/compare/v3.6.12...v3.6.13) (2023-10-12)
 
 
