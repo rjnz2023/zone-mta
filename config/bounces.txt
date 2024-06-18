@@ -7,6 +7,15 @@
 
 # This file will be cached after ZoneMTA is started, so in order to reload the rules, send a SIGHUP signal to the master process
 
+# CUSTOM RULES START
+
+^.*content filter.*$,reject,message,Message blocked by Content Filter
+^.*SpamAssassin.*$,reject,message,Message blocked by SpamAssassin Score
+^.*spam.*$,reject,message,Message blocked because it contains content identified as spam
+^\d{3}[ \-]+\[.*\][ \-]+No MX for your FROM address[ \-]+\(.*\)$,reject,config,No MX for FROM address
+
+# CUSTOM RULES END
+
 #550-"JunkMail rejected - [hostname] [11.2.3.4]:24706 is in an RBL: Blocked - see https://www.spamcop.net/bl.shtml?1.2.3.4"
 ^5\d\d.*www\.spamcop\.net,defer,blacklist,Sender IP blacklisted
 
